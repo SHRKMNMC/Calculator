@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Pantalla -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="end|center_vertical"
+        android:text="0"
+        android:textSize="36sp"
+        android:background="#E0E0E0"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:scrollHorizontally="true"
+        android:singleLine="true" />
+
+    <!-- Botones de memoria -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnMC"
+            style="@style/MemoryButton"
+            android:text="MC"/>
+        <Button
+            android:id="@+id/btnMR"
+            style="@style/MemoryButton"
+            android:text="MR"/>
+        <Button
+            android:id="@+id/btnMPlus"
+            style="@style/MemoryButton"
+            android:text="M+"/>
+        <Button
+            android:id="@+id/btnMMinus"
+            style="@style/MemoryButton"
+            android:text="M-"/>
+    </LinearLayout>
+
+    <!-- GridLayout de botones -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:alignmentMode="alignMargins"
+        android:rowOrderPreserved="false"
+        android:layout_marginTop="8dp">
+
+        <!-- Fila 1 -->
+        <Button android:id="@+id/btnClear" android:text="C" style="@style/GridButton"/>
+        <Button android:id="@+id/btnPlusMinus" android:text="±" style="@style/GridButton"/>
+        <Button android:id="@+id/btnPercent" android:text="%" style="@style/GridButton"/>
+        <Button android:id="@+id/btnDivide" android:text="÷" style="@style/GridButton"/>
+
+        <!-- Fila 2 -->
+        <Button android:id="@+id/btn7" android:text="7" style="@style/GridButton"/>
+        <Button android:id="@+id/btn8" android:text="8" style="@style/GridButton"/>
+        <Button android:id="@+id/btn9" android:text="9" style="@style/GridButton"/>
+        <Button android:id="@+id/btnMultiply" android:text="×" style="@style/GridButton"/>
+
+        <!-- Fila 3 -->
+        <Button android:id="@+id/btn4" android:text="4" style="@style/GridButton"/>
+        <Button android:id="@+id/btn5" android:text="5" style="@style/GridButton"/>
+        <Button android:id="@+id/btn6" android:text="6" style="@style/GridButton"/>
+        <Button android:id="@+id/btnMinus" android:text="−" style="@style/GridButton"/>
+
+        <!-- Fila 4 -->
+        <Button android:id="@+id/btn1" android:text="1" style="@style/GridButton"/>
+        <Button android:id="@+id/btn2" android:text="2" style="@style/GridButton"/>
+        <Button android:id="@+id/btn3" android:text="3" style="@style/GridButton"/>
+        <Button android:id="@+id/btnPlus" android:text="+" style="@style/GridButton"/>
+
+        <!-- Fila 5 -->
+        <Button android:id="@+id/btn0" android:text="0" style="@style/GridButton" android:layout_columnSpan="2"/>
+        <Button android:id="@+id/btnDot" android:text="." style="@style/GridButton"/>
+        <Button android:id="@+id/btnEquals" android:text="=" style="@style/GridButton"/>
+    </GridLayout>
+</LinearLayout>
